@@ -2,10 +2,8 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import {Canvas} from 'butterfly-dag';
 import mockData from './data';
-
 import 'butterfly-dag/dist/index.css';
 import './index.less';
-
 class ForceTree extends Component {
   componentDidMount() {
     let root = document.getElementById('dag-canvas');
@@ -19,9 +17,12 @@ class ForceTree extends Component {
       layout: {
         type: 'forceLayout',
         options: {
+          preventOverlap: true,
+          nodeSize: 100,
+          preventOverlapPadding: 100,
           link: {
             // 线条的距离
-            distance: 1500,
+            distance: 200,
             // 线条的粗细
             strength: 1
           },

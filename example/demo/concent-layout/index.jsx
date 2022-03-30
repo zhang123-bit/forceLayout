@@ -28,6 +28,7 @@ class ConcentLayout extends Component {
           sortBy: 'degree',
           minNodeSpacing: 40,
           preventOverlap: true,
+
         },
       },
     });

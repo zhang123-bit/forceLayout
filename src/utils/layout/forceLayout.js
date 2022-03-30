@@ -49,6 +49,7 @@ function forceLayout(param) {
         }
       })())
       .force('center', d3.forceCenter(opts.width / 2, opts.height / 2))
+
       .force('link', d3.forceLink(edges).id((node) => {
         return node[_.get(opts.link, 'id', 'id')];
       }).distance(opts.link.distance).strength(opts.link.strength))

@@ -15,7 +15,7 @@ class BaseNode extends Node {
       .css('top', this.top + 'px')
       .css('left', this.left + 'px')
       .attr('id', this.id = opts.id);
-    container.text(opts.options.id);
+    container.text(opts.options.name);
 
     return container[0];
   }
